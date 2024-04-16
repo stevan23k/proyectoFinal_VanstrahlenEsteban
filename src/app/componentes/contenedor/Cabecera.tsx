@@ -1,13 +1,14 @@
 import { NavLink } from "react-router-dom";
+import milogo from '../../../assets/img/logoReact.png'
 
 export const Cabecera = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
+          <NavLink className="navbar-brand" to="/">
+            <img src={milogo} alt="" />
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -31,28 +32,25 @@ export const Cabecera = () => {
                   Almacenes
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/crearcami">
+              
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Camisas
-                </NavLink>
+                </a>
+                <ul className="dropdown-menu">
+                  <li><NavLink className="dropdown-item" to="/crearcami">Registrar camisas </NavLink></li>
+                  <li><NavLink className="dropdown-item" to="/listacami">Listar camisas</NavLink></li>
+                  <li><hr className="dropdown-divider"/></li>
+                  <li><NavLink className="dropdown-item" to="/admincami">Administrar camisas</NavLink></li>
+                </ul>
               </li>
+
               <li className="nav-item">
                 <NavLink className="nav-link" to="/acercade">
                   Acerca de
                 </NavLink>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-light" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
