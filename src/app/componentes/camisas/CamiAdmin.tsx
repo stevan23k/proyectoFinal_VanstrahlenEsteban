@@ -9,7 +9,7 @@ export const CamiAdmin = () => {
   const [arrCamisas] = useState<Camisas[]>(ARREGLO_CAMISAS);
 
   const [objCam, setObjCam] = useState<Camisas>(
-    new Camisas(0, "", "", "", "", "")
+    new Camisas(0, "", "","", "", "", "")
   );
   const [show, setShow] = useState<boolean>(false);
   const handeClose = () => {
@@ -54,7 +54,10 @@ export const CamiAdmin = () => {
                 <th style={{ width: "20%" }} className="text-center">
                   Color
                 </th>
-                <th style={{ width: "20%" }} className="text-center">
+                <th style={{ width: "10%" }} className="text-center">
+                  Precio
+                </th>
+                <th style={{ width: "10%" }} className="text-center">
                   talla
                 </th>
                 <th style={{ width: "20%" }} className="text-center">
@@ -71,6 +74,8 @@ export const CamiAdmin = () => {
                   <td className="text-center">{miCami.codCamisa}</td>
                   <td className="text-center">{miCami.marcaCamisa}</td>
                   <td className="text-center">{miCami.colorCamisa}</td>
+                  <td className="text-center">${miCami.precioCamisa}</td>
+                  
                   <td className="text-center">
                     {obtenerTalla(miCami.tallaCamisa)}
                   </td>
