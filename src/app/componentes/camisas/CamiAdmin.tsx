@@ -127,8 +127,8 @@ export const CamiAdmin = () => {
                 
                 </Modal.Body>
                 <Modal.Footer>
-                  <Button variant="secondari" onClick={(e)=>{setShow(false)}}>Cancelar</Button>
-                  <Button variant="danger" onClick={(e)=>{eliminarCamisa(objCam.codCamisa); setShow(false)}}>eliminar</Button>
+                  <Button variant="secondari" onClick={(_e)=>{setShow(false)}}>Cancelar</Button>
+                  <Button variant="danger" onClick={(_e)=>{eliminarCamisa(objCam.codCamisa); setShow(false)}}>eliminar</Button>
                 </Modal.Footer>
               
           </Modal>
