@@ -12,6 +12,8 @@ export const Acerca = () =>{
           <div className="row pt-2">
             <div className="col-12">
               <h3 className="border-bottom mb-4">Acerca de</h3>
+              <h1 className= "mb-4">profe la quiero mucho</h1>
+              
             </div>
           </div>
 
@@ -78,7 +80,6 @@ export const Acerca = () =>{
           </div>
         </div>
       </section>
-      <h1>profe la quiero mucho</h1>
     </>
     );
 };
